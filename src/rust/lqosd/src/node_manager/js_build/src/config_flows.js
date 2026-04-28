@@ -157,9 +157,13 @@ function validateConfig() {
     const netflowIp = document.getElementById("netflowIP").value.trim();
     if (netflowIp) {
         try {
-            new URL(`http://${netflowIp}`);
+            const parsed = new URL(`http://${netflowIp}`);
+            if (!parsed.hostname || parsed.port || parsed.pathname !== "/"
+                || parsed.search || parsed.hash || parsed.username || parsed.password) {
+                throw new Error("invalid host");
+            }
         } catch {
-            alert("Netflow IP must be a valid IP address");
+            alert("Netflow Collector Address must be a valid IP address or hostname");
             return false;
         }
     }

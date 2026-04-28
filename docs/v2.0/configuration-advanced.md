@@ -53,7 +53,7 @@ Optional cobrand logo:
 - The WebUI only shows the operator logo when `display_cobrand = true` and `cobrand.png` exists in the runtime static assets directory.
 
 #### Netflow (optional)
-To enable netflow, add the following `[flows]` section to the `/etc/lqos.conf` configuration file, setting the appropriate `netflow_ip`:
+To enable netflow, add the following `[flows]` section to the `/etc/lqos.conf` configuration file, setting `netflow_ip` to the IP address or hostname of your Netflow collector:
 ```
 [flows]
 flow_timeout_seconds = 30

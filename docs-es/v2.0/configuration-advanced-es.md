@@ -51,7 +51,7 @@ Logo compartido opcional:
 - La WebUI solo muestra el logo del operador cuando `display_cobrand = true` y `cobrand.png` existe en el directorio de assets estáticos en runtime.
 
 ### Netflow (opcional)
-Para habilitar Netflow, agregue la siguiente sección `[flows]` al archivo de configuración `/etc/lqos.conf`, configurando el `netflow_ip` adecuado:
+Para habilitar Netflow, agregue la siguiente sección `[flows]` al archivo de configuración `/etc/lqos.conf`, configurando `netflow_ip` con la dirección IP o el nombre de host del recolector de Netflow:
 ```
 [flows]
 flow_timeout_seconds = 30
